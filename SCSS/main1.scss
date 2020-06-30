@@ -1,0 +1,68 @@
+/*
+* Style Sheet for CS202
+* Version 1.1.0
+* Last Modified: 6.29.20
+* Author: Nathan Romond
+* Email: romondn@wwu.edu
+*/
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js");
+
+//Style Rule
+/* selector{declaration;} */
+/* selector{property:value;} */
+
+//CSS Variables
+:root{
+    --main-color: #05a081;
+}
+
+//Calling CSS Variable
+h2{
+    color:var(--main-color);
+}
+//SCSS Variables
+
+$primary:#660066;
+$margin: 22px;
+
+//Calling SCSS Variables
+h3{
+    color:$primary;
+    margin:$margin;
+}
+
+body{
+    //Important Rule:Overrides the styling on the page in favor of the styling indicated by the rule
+    background-color: #352d34 !important;
+    /* Font
+    * font-family: Arial, Helvetica, sans-serif;
+    * font-style: italic;
+    * font-weight: bold;
+    * line-height: 150%;
+    * text-transform: uppercase;*/
+    // font shorthand
+    //font: font-style font-variant font-weight font-size/line-height font-family;
+    //font:italic bold 18px/150% Arial, Helvetica, sans-serif;
+
+    //nesting properties
+    // font: {
+    //     style:italic;
+    //     weight: bold;
+    //     family: Arial;
+    // }
+    // text: {
+    //     transform: uppercase;
+    // }
+
+}
+//Nesting Elements
+//Ex: Create styling for links within navigation menus by nesting styling for <a> in styling for <nav> 
+//Removes underline for links in navigation menu
+nav{ 
+    color:blue;
+    a{
+text-decoration: none;
+    }
+}
